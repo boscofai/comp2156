@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\""
+    "build": "echo 'No build step defined. Add your build command here.'"
   },
   "repository": {
     "type": "git",
