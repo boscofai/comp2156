@@ -1,20 +1,13 @@
 language: node_js
 node_js:
   - "stable"
-
-dist: focal  # Ubuntu 20.04
-
-install:
-  - npm install  # Install dependencies
-
-script:
-  - npm run build  # Build the project (Make sure your package.json has a "build" script)
-
+ dist: focal
 deploy:
   provider: pages
-  keep_history: true  # Instead of `skip_cleanup`
-  github_token: $GITHUB_TOKEN  # Correct environment variable
-  local_dir: build  # The folder that contains your built files
+  skip_cleanup: true
+  github_token: $github_token
+  local_dir: build
   on:
-    branch: main  # Deploy only on main branch
+    branch: main
+
 
